@@ -77,6 +77,10 @@ iframe {
     display: flex;
 }
 
+.resources {
+    display: flex;
+}
+
 
 @media only screen and (max-width: 600px) {
 
@@ -96,6 +100,11 @@ iframe {
     iframe {
         height: auto;
         width: 250px;
+        margin-left: 0;
+    }
+
+    img {
+        margin-left: 0;
     }
 
     .nav-item {
@@ -173,7 +182,6 @@ iframe {
     }
 
     .resources {
-        display: flex;
         justify-content: center;
     }
 }
