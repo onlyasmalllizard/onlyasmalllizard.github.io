@@ -1,13 +1,31 @@
 ---
 layout: default
 ---
+{% assign frameworks = page.frameworks %}
+{% assign apis = page.apis %}
+{% assign tools = page.tools %}
+
 <div class='basic-details'>
     <h2>{{ page.h2 }}</h2>
     <div class="tools-used">
         <p><strong>Languages used:</strong> {{ page.languages }}</p>
-        <p><strong>Frameworks used:</strong> {{ page.frameworks }}</p>
-        <p><strong>APIs used:</strong> {{ page.apis }}</p>
-        <p><strong>Other tools:</strong> {{ page.tools }}</p>
+        {% if frameworks %}
+            <p><strong>Frameworks used:</strong> {{ page.frameworks }}</p>
+        {% endif %}
+        {% if apis %}
+            <p><strong>APIs used:</strong> {{ page.apis }}</p>
+        {% endif %}
+        {% if tools %}
+            <p><strong>Other tools:</strong> {{ page.tools }}</p>
+        {% endif %}
     </div>
 </div>
 {{ content }}
+<h3>Resources</h3>
+<div class='links'>
+    <strong>{{ page.link1 }}</strong>
+    <strong>{{ page.link2 }}</strong>
+</div>
+<div class='resources'>
+    {{ page.resource }}
+</div>
